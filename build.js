@@ -6,10 +6,11 @@ const layouts = require('metalsmith-layouts');
 const browserSync = require('metalsmith-browser-sync');
 const assets = require('metalsmith-assets');
 const sass = require('metalsmith-sass');
+const inPlace = require('metalsmith-in-place');
 const webpackConfig = require('./webpack.config.js');
 
-const DEVMODE = process.env.AUTO_RELOAD ? true : false;
 
+const DEVMODE = process.env.AUTO_RELOAD ? true : false;
 
 const metadataOptions = {
   title: "Static Site",
@@ -28,9 +29,13 @@ var config = metalsmith(__dirname)
     })
   )
   .use(markdown())
+  .use(inPlace({
+      engine: 'handlebars'
+    })
+  )
   .use(layouts({
-      engine: "handlebars",
-      partials: "snippets",
+      engine: "swig", // "handlebars",
+      // partials: "snippets",
       directory: "layouts",
       default: "default.html"
     })

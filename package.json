@@ -13,21 +13,28 @@
   "author": "Giorgio Borelli",
   "license": "GPL-2.0",
   "dependencies": {
+    "autoprefixer": "^6.3.7",
     "cross-env": "^1.0.8",
     "css-loader": "^0.23.1",
     "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
     "handlebars": "^4.0.5",
     "metalsmith": "^2.1.0",
     "metalsmith-assets": "^0.1.0",
     "metalsmith-browser-sync": "^1.1.1",
+    "metalsmith-in-place": "^1.4.4",
     "metalsmith-layouts": "^1.6.5",
     "metalsmith-markdown": "^0.2.1",
     "metalsmith-watch": "^1.0.3",
     "metalsmith-watcher": "^0.1.2",
     "metalsmith-webpack": "^1.0.3",
+    "postcss-loader": "^0.9.1",
     "rimraf": "^2.5.2",
     "sass-loader": "^4.0.0",
+    "script-loader": "^0.7.0",
     "style-loader": "^0.13.1",
+    "swig": "^1.4.2",
+    "url-loader": "^0.5.7",
     "webpack": "^1.13.1"
   }
 }

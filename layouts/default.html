@@ -1,13 +1,7 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>{{title}}</title>
-  <meta name="description" content="{{ description }}">
-  <script src="./bundle.js"></script>
-   <link href='./main.css' rel='stylesheet' type='text/css'>
-</head>
-<body>
-  <h1>{{ title }}</h1>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block pagetitle %}<h1>Questa è la mia pagina</h1>{% endblock %}
+
+{% block content %}
+  Test ...
+{% endblock %}

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{title}}</title>
+  <meta name="description" content="{{ description }}">
+  <script src="./bundle.js"></script>
+   <link href='./main.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  {% block pagetitle %}
+    <h1>{{ title }}</h1>
+  {% endblock %}
+
+  {% block content %}
+    {% autoescape false %}{{ contents }}{% endautoescape %}
+  {% endblock %}
+
+  {% include "../snippets/footer.html" %}
+
+</body>
+</html>
